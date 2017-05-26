@@ -1,0 +1,2 @@
+#Import hotels.json into a Mongo database:
+

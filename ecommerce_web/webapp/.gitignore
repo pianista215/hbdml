@@ -1,0 +1,16 @@
+.classpath
+.project
+.settings
+.ensime*
+*.log
+nbproject/
+build.xml
+nbactions.xml
+nb-configuration.xml
+.idea
+*.iml
+*.xml.asc
+*.orig
+*.cache
+target/
+.DS_Store

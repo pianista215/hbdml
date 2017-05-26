@@ -22,6 +22,7 @@ class HotelsSpider(scrapy.Spider):
             name = hotel.css(".sr-hotel__name::text").extract_first().strip()
             stars = hotel.css("::attr(data-class)").extract_first().strip()
             price = hotel.css('strong').css("b::text").extract_first()
+            image_url = hotel.css('img::attr(src)').extract_first().strip()
             if price is not None:
                 #Avoid € storage
                 price_value = price.strip()[2:]
@@ -29,7 +30,8 @@ class HotelsSpider(scrapy.Spider):
                     'city': city,
                     'name': name,
                     'stars': stars,
-                    'price': price_value
+                    'price': price_value,
+                    'image_url': image_url
                 }
 
         next_page = response.css('[data-page-next]::attr(href)').extract_first()

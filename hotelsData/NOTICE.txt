@@ -1,0 +1,7 @@
+Python 3
+Scrapy required
+
+pip install Scrapy
+
+Inside the folder of the scraper:
+scrapy crawl hotels -o ../hotels.json

@@ -1,2 +1,10 @@
 #Import hotels.json into a Mongo database:
 
+#Stage webapp
+sbt stage
+
+#Publish docker in local
+sbt docker:publishLocal
+
+#RunDocker
+docker run -p8080:8080 devsmobile/hotels_webapp:1.0

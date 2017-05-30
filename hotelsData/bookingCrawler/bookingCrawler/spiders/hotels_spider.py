@@ -29,8 +29,8 @@ class HotelsSpider(scrapy.Spider):
                 yield {
                     'city': city,
                     'name': name,
-                    'stars': stars,
-                    'price': price_value,
+                    'stars': int(stars),
+                    'price': float(price_value),
                     'image_url': image_url
                 }
 

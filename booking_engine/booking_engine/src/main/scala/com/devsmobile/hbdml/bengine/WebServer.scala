@@ -8,12 +8,13 @@ import com.typesafe.config.ConfigFactory
 import scala.io.StdIn
 import akka.http.scaladsl.server.Directives
 import akka.http.scaladsl.marshallers.sprayjson.SprayJsonSupport
-import com.devsmobile.hbdml.bengine.{BookingConfirmation, BookingRequest, BookingServiceImpl}
+import com.devsmobile.hbdml.bengine.models.{BookingConfirmation, BookingRequest}
+import com.devsmobile.hbdml.bengine.service.BookingServiceImpl
 import spray.json._
 
 // collect your json format instances into a support trait:
 trait JsonSupport extends SprayJsonSupport with DefaultJsonProtocol {
-  implicit val bookingRequestFormat = jsonFormat3(BookingRequest)
+  implicit val bookingRequestFormat = jsonFormat5(BookingRequest)
   implicit val bookingConfFormat = jsonFormat3(BookingConfirmation)
 }
 

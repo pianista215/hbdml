@@ -1,12 +1,11 @@
-package com.devsmobile.hbdml.mongo
+package com.devsmobile.hbdml.webapp.mongo
 
-import com.devsmobile.hbdml.models.Hotel
+import com.devsmobile.hbdml.webapp.models.Hotel
 import org.mongodb.scala.bson.collection.immutable.Document
 import org.mongodb.scala.{MongoClient, MongoCollection, MongoDatabase}
 import org.mongodb.scala.model.Sorts._
 
 import scala.concurrent.Future
-
 import scala.concurrent.ExecutionContext.Implicits.global //TODO
 
 object MongoDB {

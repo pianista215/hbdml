@@ -5,13 +5,13 @@ import akka.http.scaladsl.Http
 import akka.http.scaladsl.model._
 import akka.http.scaladsl.server.Directives._
 import akka.stream.ActorMaterializer
-import com.devsmobile.hbdml.mongo.MongoDB
 import com.typesafe.config.ConfigFactory
 
 import scala.io.StdIn
 import akka.http.scaladsl.server.Directives
 import akka.http.scaladsl.marshallers.sprayjson.SprayJsonSupport
 import com.devsmobile.hbdml.models.Hotel
+import com.devsmobile.hbdml.webapp.mongo.MongoDB
 import spray.json._
 
 // collect your json format instances into a support trait:
